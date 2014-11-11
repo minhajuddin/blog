@@ -46,7 +46,12 @@ func (p *Post) save() {
 		log.Println("ERROR: ", err)
 		return
 	}
-	defer f.Close()
+	defer func() {
+		err := f.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}()
 
 	//write as json
 	err = json.NewEncoder(f).Encode(p)

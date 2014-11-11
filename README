@@ -7,9 +7,9 @@
     a. Save it using a test drive
       i. failing tests #1e5620a
       ii. passing tests #d1129b7
-    b. Save it using the incoming request
+    b. Save it using the incoming request #819d70a
       we'll let this be handled by a POST to /posts
-    c. Write tests
+    c. Write tests #819d70a
  2. Read the posts and render them on the home page
  3. Error handling
  4. RSS
