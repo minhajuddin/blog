@@ -65,7 +65,7 @@ func (p *Post) save() {
 func allPosts() []*Post {
 	posts := make([]*Post, 0, 10)
 
-	filepath.Walk(dataDir, func(p string, info os.FileInfo, err error) error {
+	err := filepath.Walk(dataDir, func(p string, info os.FileInfo, err error) error {
 		if err != nil {
 			log.Println(err)
 			posts = make([]*Post, 0)
@@ -85,6 +85,11 @@ func allPosts() []*Post {
 		posts = append(posts, findPost(id))
 		return nil
 	})
+
+	if err != nil {
+		log.Println(err)
+		return posts
+	}
 
 	return posts
 }

@@ -12,8 +12,7 @@
       we'll let this be handled by a POST to /posts
     c. Write tests #819d70a
 
- 2. Read the posts and render them on the home page
-
+ 2. Read the posts and render them on the home page #d3fe189
  3. Error handling
  4. RSS
  5. Comments
