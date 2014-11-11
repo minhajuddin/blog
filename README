@@ -5,7 +5,10 @@
     d. automate testing and checking for errors using a makefile #f8cd8fb
  1. Store a post as a text file
     a. Save it using a test drive
+      i. failing tests #1e5620a
+      ii. passing tests #d1129b7
     b. Save it using the incoming request
+      we'll let this be handled by a POST to /posts
     c. Write tests
  2. Read the posts and render them on the home page
  3. Error handling

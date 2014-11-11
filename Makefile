@@ -1,6 +1,6 @@
-all: test
+all: test errcheck
 
-test: errcheck
+test:
 	go test -v
 
 build: errcheck

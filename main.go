@@ -12,6 +12,9 @@ func main() {
 	//a request for path beginning with slash (which is all paths)
 	//should be handled by the hello function
 	http.HandleFunc("/", hello)
+
+	http.HandleFunc("/posts", createPost)
+
 	log.Println("starting a server on http://localhost", port)
 	//start the server on this port
 	err := http.ListenAndServe(port, nil)
