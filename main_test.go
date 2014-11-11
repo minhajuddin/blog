@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net/http"
 	"net/http/httptest"
 	"testing"
 )
@@ -10,7 +11,7 @@ func TestHello(t *testing.T) {
 	r := httptest.NewRecorder()
 	hello(r, nil)
 
-	if r.Code != 200 {
+	if r.Code != http.StatusOK {
 		t.Errorf("incorrect response code %s", r.Code)
 	}
 

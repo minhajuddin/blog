@@ -1,1 +1,8 @@
-  Ability to create a post
+ 0. Start a web server
+    a. basic code #5b59e4c
+    b. add tests #f93d29a
+    c. handle errors using errcheck `errcheck blog`
+    d. automate testing and checking for errors using a makefile
+ 1. Store a post as a text file
+ 2. Read the posts and render them on the home page
+ 3. Error handling
