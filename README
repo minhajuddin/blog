@@ -3,6 +3,7 @@
     b. add tests #f93d29a
     c. handle errors using errcheck `errcheck blog` #eba0318
     d. automate testing and checking for errors using a makefile #f8cd8fb
+
  1. Store a post as a text file
     a. Save it using a test drive
       i. failing tests #1e5620a
@@ -10,7 +11,9 @@
     b. Save it using the incoming request #819d70a
       we'll let this be handled by a POST to /posts
     c. Write tests #819d70a
+
  2. Read the posts and render them on the home page
+
  3. Error handling
  4. RSS
  5. Comments

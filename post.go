@@ -60,3 +60,31 @@ func (p *Post) save() {
 		return
 	}
 }
+
+//loads all posts
+func allPosts() []*Post {
+	posts := make([]*Post, 0, 10)
+
+	filepath.Walk(dataDir, func(p string, info os.FileInfo, err error) error {
+		if err != nil {
+			log.Println(err)
+			posts = make([]*Post, 0)
+			return err
+		}
+
+		if info.IsDir() {
+			return nil
+		}
+
+		idstr := filepath.Base(p)
+		id, err := strconv.Atoi(idstr)
+		if err != nil {
+			log.Println(err)
+			return err
+		}
+		posts = append(posts, findPost(id))
+		return nil
+	})
+
+	return posts
+}
