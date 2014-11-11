@@ -16,6 +16,22 @@ type Post struct {
 
 const dataDir = "./data"
 
+func findPost(ID int) *Post {
+	fp := filepath.Join(dataDir, strconv.Itoa(ID))
+	f, err := os.Open(fp)
+	if err != nil {
+		log.Println(err)
+		return nil
+	}
+	p := Post{}
+	err = json.NewDecoder(f).Decode(&p)
+	if err != nil {
+		log.Println(err)
+		return nil
+	}
+	return &p
+}
+
 //save this post
 func (p *Post) save() {
 	//create parent directory if it is not present

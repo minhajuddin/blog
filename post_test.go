@@ -28,3 +28,16 @@ func TestPostSave(t *testing.T) {
 		t.Errorf("body not present in: %s.", s)
 	}
 }
+
+func TestFindPost(t *testing.T) {
+	p := Post{ID: 132,
+		Title: "Archer",
+		Body:  "Do you want ants?",
+	}
+	p.save()
+
+	post := findPost(p.ID)
+	if p.ID != post.ID || p.Title != post.Title || p.Body != post.Body {
+		t.Errorf("expected %#v but got %#v", p, *post)
+	}
+}
