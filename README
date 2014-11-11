@@ -1,8 +1,14 @@
  0. Start a web server
     a. basic code #5b59e4c
     b. add tests #f93d29a
-    c. handle errors using errcheck `errcheck blog`
-    d. automate testing and checking for errors using a makefile
+    c. handle errors using errcheck `errcheck blog` #eba0318
+    d. automate testing and checking for errors using a makefile #f8cd8fb
  1. Store a post as a text file
+    a. Save it using a test drive
+    b. Save it using the incoming request
+    c. Write tests
  2. Read the posts and render them on the home page
  3. Error handling
+ 4. RSS
+ 5. Comments
+ 6. Spam handling
