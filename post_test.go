@@ -21,10 +21,10 @@ func TestPostSave(t *testing.T) {
 
 	s := string(data)
 	if !strings.Contains(s, "Hello World!") {
-		t.Errorf("title not present in:", s)
+		t.Errorf("title not present in: %s.", s)
 	}
 
 	if !strings.Contains(s, "This is my first post!") {
-		t.Errorf("body not present in:", s)
+		t.Errorf("body not present in: %s.", s)
 	}
 }
